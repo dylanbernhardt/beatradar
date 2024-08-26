@@ -1,0 +1,1236 @@
+<!doctype html>
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV9F68FR5Y" type="e50a99ba960e0c3b516ab364-text/javascript"></script>
+    <script type="e50a99ba960e0c3b516ab364-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TV9F68FR5Y');
+    </script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="DESCRIPTION" content="Rankings for Artists, Tracks and Labels based off the Beatport Top-100 charts">
+    <meta name="KEYWORDS" content="beatport, charts, top, 100, trance, electro-house, electro-tech, rankings, labels, artists">
+
+    <link href="/_includes/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="/_includes/jquery.js" type="e50a99ba960e0c3b516ab364-text/javascript"></script>
+    <script src="/_includes/bootstrap.bundle.min.js" type="e50a99ba960e0c3b516ab364-text/javascript"></script>
+    <link href="/_includes/style.css?version=3" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+    <script language="javascript" type="e50a99ba960e0c3b516ab364-text/javascript">
+        function audioplayerget(str){
+            if (str==""){
+              document.getElementById("footer").innerHTML="";
+              return;
+              }
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function(){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("footer").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","/_includes/audioplayer.php?BPID="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+
+
+
+    <title>BeatStats - TRANCE (MAIN FLOOR) - Top Tracks</title>
+</head>
+
+
+
+
+<body >
+
+
+<div id="container">
+
+    <div id="header">
+
+        <div id="header-logo">
+            <a href='/'><img src="/_images/interface/logo_heading.png" width="944" height="66" alt=""/> </a></div>
+
+
+
+
+        <div id="search-bar-container">
+            <!-- The form tag should encompass the input group -->
+            <form class="input-group" action='/search/search/index' method="post">
+                <input type="text" name="searchresult" class="form-control" placeholder="" required pattern="[a-zA-Z0-9-.\s'()]+" >
+                <button type="submit" class="input-group-text">
+                    <i class="fas fa-search"></i> <!-- Font Awesome eyeglass icon -->
+                </button>
+            </form>
+        </div>
+
+        <div id="header-top10">
+            <a href='/top10/home/list?genre=7&period=2'><img src="/_images/interface/topbar_top10_a.png" width="59" height="25" alt=""/></a>
+        </div>
+
+        <div id="header-artists">
+            <a href='/artists/home/list?genre=7&period=2'><img src="/_images/interface/topbar_artists_a.png" width="66" height="25" alt=""/></a>
+        </div>
+
+        <div id="header-tracks">
+            <a href='/tracks/home/list?genre=7&period=2'><img src="/_images/interface/topbar_tracks_b.png" width="66" height="25" alt=""/></a>
+        </div>
+
+        <div id="header-labels">
+            <a href='/labels/home/list?genre=7&period=2'><img src="/_images/interface/topbar_labels_a.png" width="66" height="25" alt=""/></a>
+        </div>
+
+
+        <div id="header-timeselect3">
+            <a href='/tracks/home/list?genre=7&period=1'><img src="/_images/interface/time_selector_3_a.png" width="66" height="21" alt=""/></a>
+        </div>
+
+        <div id="header-timeselect12">
+            <a href='/tracks/home/list?genre=7&period=2'><img src="/_images/interface/time_selector_12_b.png" width="66" height="21" alt=""/></a>
+        </div>
+
+        <div id="header-timeselectalltime">
+            <a href='/tracks/home/list?genre=7&period=3'><img src="/_images/interface/time_selector_alltime_a.png" width="55" height="21" alt=""/></a>
+        </div>
+
+        <div id="header-timeselectyears">
+            <a href='/tracks/home/list?genre=7&period=19'><img src="/_images/interface/time_selector_years_a.png" width="46" height="21" alt=""/></a>
+        </div>
+
+
+        <div id="header-genreselect">
+
+
+
+            <div class="genreselector">
+                <a href='#' data-bs-toggle="dropdown" aria-expanded="false">
+                    TRANCE (MAIN FLOOR)   <i class="fa fa-caret-down" style="font-size: 14px;"></i>
+
+
+                </a>
+                <ul class="dropdown-menu multi-column columns-3" aria-labelledby="dropdownMenuButton">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ul class="multi-column-dropdown">
+                                <li><a class='dropdown-item' href='/tracks/home/list?genre=0&period=2'> <span class='genre1'> TOP 100 (ALL GENRES)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=95&period=2'><span class='genre1'>140 / DEEP DUBSTEP / GRIME</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=89&period=2'><span class='genre1'>AFRO HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=98&period=2'><span class='genre1'>AMAPIANO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=85&period=2'><span class='genre1'>BASS / CLUB</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=91&period=2'><span class='genre1'>BASS HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=9&period=2'><span class='genre1'>BREAKS / BREAKBEAT / UK BASS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=39&period=2'><span class='genre1'>DANCE / ELECTRO POP</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=12&period=2'><span class='genre1'>DEEP HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=16&period=2'><span class='genre1'>DJ TOOLS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1&period=2'><span class='genre1'>DRUM & BASS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=18&period=2'><span class='genre1'>DUBSTEP</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=94&period=2'><span class='genre1'>ELECTRO (CLASSIC / DETROIT / MODERN)</span></a></li>					</ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="multi-column-dropdown">
+                                <li><a class='dropdown-item' href='/tracks/home/list?genre=3&period=2'><span class='genre1'>ELECTRONICA</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=81&period=2'><span class='genre1'>FUNKY HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=8&period=2'><span class='genre1'>HARD DANCE / HARDCORE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=2&period=2'><span class='genre1'>HARD TECHNO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=5&period=2'><span class='genre1'>HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=37&period=2'><span class='genre1'>INDIE DANCE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=97&period=2'><span class='genre1'>JACKIN HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=96&period=2'><span class='genre1'>MAINSTAGE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=90&period=2'><span class='genre1'>MELODIC HOUSE & TECHNO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=14&period=2'><span class='genre1'>MINIMAL / DEEP TECH</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=50&period=2'><span class='genre1'>NU DISCO / DISCO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=93&period=2'><span class='genre1'>ORGANIC HOUSE / DOWNTEMPO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=15&period=2'><span class='genre1'>PROGRESSIVE HOUSE</span></a></li>					</ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="multi-column-dropdown">
+                                <li><a class='dropdown-item' href='/tracks/home/list?genre=13&period=2'><span class='genre1'>PSY-TRANCE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=11&period=2'><span class='genre1'>TECH HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=6&period=2'><span class='genre1'>TECHNO (PEAK TIME / DRIVING)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=92&period=2'><span class='genre1'>TECHNO (RAW / DEEP / HYPNOTIC)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2'><span class='genre1'>TRANCE (MAIN FLOOR)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=99&period=2'><span class='genre1'>TRANCE (RAW / DEEP / HYPNOTIC)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=38&period=2'><span class='genre1'>TRAP / WAVE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=86&period=2'><span class='genre1'>UK GARAGE / BASSLINE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1089&period=2'><span class='genre1'>HYPE - AFRO HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1039&period=2'><span class='genre1'>HYPE - DANCE / ELECTRO POP</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1012&period=2'><span class='genre1'>HYPE - DEEP HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1001&period=2'><span class='genre1'>HYPE - DRUM & BASS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1003&period=2'><span class='genre1'>HYPE - ELECTRONICA</span></a></li></ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="multi-column-dropdown">
+                                <li><a class='dropdown-item' href='/tracks/home/list?genre=1005&period=2'><span class='genre1'>HYPE - HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1037&period=2'><span class='genre1'>HYPE - INDIE DANCE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1096&period=2'><span class='genre1'>HYPE - MAINSTAGE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1090&period=2'><span class='genre1'>HYPE - MELODIC HOUSE & TECHNO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1014&period=2'><span class='genre1'>HYPE - MINIMAL / DEEP TECH</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1093&period=2'><span class='genre1'>HYPE - ORGANIC HOUSE / DOWNTEMPO</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1015&period=2'><span class='genre1'>HYPE - PROGRESSIVE HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1011&period=2'><span class='genre1'>HYPE - TECH HOUSE</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1006&period=2'><span class='genre1'>HYPE - TECHNO (PEAK TIME / DRIVING)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1000&period=2'><span class='genre1'>HYPE - TOP 100 (ALL GENRES)</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=1007&period=2'><span class='genre1'>HYPE - TRANCE</span></a></li></ul>
+
+
+                        </div>
+                    </div>
+                </ul>
+
+                - <a href='#' data-bs-toggle='dropdown' aria-expanded='false'>FILTER BY KEY <i class='fa fa-caret-down' style='font-size: 14px;'></i>
+            </a>
+                <ul class='dropdown-menu columns-1' aria-labelledby='dropdownMenuButton'><li><a class='dropdown-item' href=''><span class='genre1'><strong>MAJOR</strong></span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=8'><span class='genre1'>1B - B MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=10'><span class='genre1'>2B - F# MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=12'><span class='genre1'>3B - C# MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=14'><span class='genre1'>4B - G# MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=16'><span class='genre1'>5B - D# MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=18'><span class='genre1'>6B - A# MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=20'><span class='genre1'>7B - F MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=22'><span class='genre1'>8B - C MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=24'><span class='genre1'>9B - G MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=2'><span class='genre1'>10B - D MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=4'><span class='genre1'>11B - A MAJOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=6'><span class='genre1'>12B - E MAJOR</span></a></li><hr><li><a class='dropdown-item' href=''><span class='genre1'><strong>MINOR</strong></span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=77'><span class='genre1'>1A - G# MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=9'><span class='genre1'>2A - D# MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=11'><span class='genre1'>3A - A# MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=13'><span class='genre1'>4A - F MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=15'><span class='genre1'>5A - C MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=17'><span class='genre1'>6A - G MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=19'><span class='genre1'>7A - D MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=21'><span class='genre1'>8A - A MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=23'><span class='genre1'>9A - E MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=1'><span class='genre1'>10A - B MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=3'><span class='genre1'>11A - F# MINOR</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&key=5'><span class='genre1'>12A - C# MINOR</span></a></li></ul> - <a href='#' data-bs-toggle='dropdown' aria-expanded='false'>FILTER BY DATE <i class='fa fa-caret-down' style='font-size: 14px;'></i>
+            </a>
+                <ul class='dropdown-menu columns-1b' aria-labelledby='dropdownMenuButton'><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&datefilter=2024-08-19'><span class='genre1'>TRACKS RELEASED 7 DAYS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&datefilter=2024-08-12'><span class='genre1'>TRACKS RELEASED 14 DAYS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&datefilter=2024-07-27'><span class='genre1'>TRACKS RELEASED LAST 30 DAYS</span></a></li><li><a class='dropdown-item' href='/tracks/home/list?genre=7&period=2&datefilter=2024-06-27'><span class='genre1'>TRACKS RELEASED LAST 60 DAYS</span></a></li></ul>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <div id="header-rule">
+        </div>
+
+
+
+    </div><!-- #header -->
+
+    <div id="content">
+
+        <div id='content-artists'>
+            <div id="top10artistchart-header"><span class="charttextname-a">TOP <strong>TRACKS</strong></span></div><a href='/track/track/14269418'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>1</div><div id='top10artistchart-image'><img src='/images/track/small/14269418.jpg?version=35659' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ROBERT MILES, TINLICKER</div>
+                    <div id='top10trackchart-title'><strong>Children</strong></div>
+                    <div id='top10trackchart-points'><strong>25145</strong> POINTS / <strong>365</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/children/14269418' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='14269418' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18160649'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>2<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18160649.jpg?version=33899' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BINARY FINARY</div>
+                    <div id='top10trackchart-title'><strong>1998 (Victor Ruiz Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>24468</strong> POINTS / <strong>317</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/1998/18160649' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18160649' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18053620'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>3</div><div id='top10artistchart-image'><img src='/images/track/small/18053620.jpg?version=9365' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN</div>
+                    <div id='top10trackchart-title'><strong>Computers Take Over The World (Maddix Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>23529</strong> POINTS / <strong>321</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/computers-take-over-the-world/18053620' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18053620' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17962687'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>4</div><div id='top10artistchart-image'><img src='/images/track/small/17962687.jpg?version=30451' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SUNBEAM</div>
+                    <div id='top10trackchart-title'><strong>Outside World (Bart Skils & Weska Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>22437</strong> POINTS / <strong>354</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/outside-world/17962687' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17962687' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18482233'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>5<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18482233.jpg?version=19995' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>PUSH</div>
+                    <div id='top10trackchart-title'><strong>Universal Nation (Charlotte de Witte Rework)</strong></div>
+                    <div id='top10trackchart-points'><strong>18995</strong> POINTS / <strong>213</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/universal-nation/18482233' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18482233' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18615671'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>6<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18615671.jpg?version=61178' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>EFFY, MALL GRAB</div>
+                    <div id='top10trackchart-title'><strong>iluv</strong></div>
+                    <div id='top10trackchart-points'><strong>17048</strong> POINTS / <strong>184</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/iluv/18615671' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18615671' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18053360'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>7</div><div id='top10artistchart-image'><img src='/images/track/small/18053360.jpg?version=31315' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>CHICANE, MOYA BRENNAN</div>
+                    <div id='top10trackchart-title'><strong>Saltwater feat. Moya Brennan (Ilan Bluestone Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>15290</strong> POINTS / <strong>223</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/saltwater-feat-moya-brennan/18053360' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18053360' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/15549994'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>8<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 11 in the last month'></div><div id='top10artistchart-arrowtext'>11</div></div><div id='top10artistchart-image'><img src='/images/track/small/15549994.jpg?version=49170' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>AGE OF LOVE</div>
+                    <div id='top10trackchart-title'><strong>The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>13142</strong> POINTS / <strong>138</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/the-age-of-love/15549994' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='15549994' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18112697'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>9</div><div id='top10artistchart-image'><img src='/images/track/small/18112697.jpg?version=50212' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>GARETH EMERY, ANNABEL, LSR/CITY</div>
+                    <div id='top10trackchart-title'><strong>Like A Prayer</strong></div>
+                    <div id='top10trackchart-points'><strong>12605</strong> POINTS / <strong>195</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/like-a-prayer/18112697' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18112697' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18093174'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>10</div><div id='top10artistchart-image'><img src='/images/track/small/18093174.jpg?version=37125' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>RANK 1, ARMIN VAN BUUREN, FERRY CORSTEN, RUBEN DE RONDE</div>
+                    <div id='top10trackchart-title'><strong>Destination (A State of Trance 2024 Anthem)</strong></div>
+                    <div id='top10trackchart-points'><strong>12449</strong> POINTS / <strong>188</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/destination-a-state-of-trance-2024-anthem/18093174' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18093174' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17959609'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>11</div><div id='top10artistchart-image'><img src='/images/track/small/17959609.jpg?version=24136' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>LE SHUUK, B-STYLEZZ</div>
+                    <div id='top10trackchart-title'><strong>Konje</strong></div>
+                    <div id='top10trackchart-points'><strong>12418</strong> POINTS / <strong>245</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/konje/17959609' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17959609' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18097910'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>12</div><div id='top10artistchart-image'><img src='/images/track/small/18097910.jpg?version=58604' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>VICTOR RUIZ, MODEā</div>
+                    <div id='top10trackchart-title'><strong>Contrast</strong></div>
+                    <div id='top10trackchart-points'><strong>11101</strong> POINTS / <strong>130</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/contrast/18097910' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18097910' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18905552'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>13<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 27 in the last month'></div><div id='top10artistchart-arrowtext'>27</div></div><div id='top10artistchart-image'><img src='/images/track/small/18905552.jpg?version=31205' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BALTHAZAR & JACKROCK</div>
+                    <div id='top10trackchart-title'><strong>In The Dark</strong></div>
+                    <div id='top10trackchart-points'><strong>10722</strong> POINTS / <strong>115</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/in-the-dark/18905552' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18905552' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18829069'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>14<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 7 in the last month'></div><div id='top10artistchart-arrowtext'>7</div></div><div id='top10artistchart-image'><img src='/images/track/small/18829069.jpg?version=14111' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN, HI-LO</div>
+                    <div id='top10trackchart-title'><strong>Now Love Will Begin</strong></div>
+                    <div id='top10trackchart-points'><strong>10680</strong> POINTS / <strong>135</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/now-love-will-begin/18829069' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18829069' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18758629'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>15<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18758629.jpg?version=37178' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN, GRYFFIN</div>
+                    <div id='top10trackchart-title'><strong>What Took You So Long</strong></div>
+                    <div id='top10trackchart-points'><strong>10551</strong> POINTS / <strong>148</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/what-took-you-so-long/18758629' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18758629' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18309146'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>16</div><div id='top10artistchart-image'><img src='/images/track/small/18309146.jpg?version=46885' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>LOCK 'N LOAD</div>
+                    <div id='top10trackchart-title'><strong>Blow Ya Mind (DJ Daddy Trance Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>10097</strong> POINTS / <strong>197</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/blow-ya-mind/18309146' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18309146' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17926528'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>17</div><div id='top10artistchart-image'><img src='/images/track/small/17926528.jpg?version=39935' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ENERGY 52</div>
+                    <div id='top10trackchart-title'><strong>Cafe Del Mar (Cosmic Boys Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>9825</strong> POINTS / <strong>171</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/cafe-del-mar/17926528' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17926528' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18795473'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>18<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 9 in the last month'></div><div id='top10artistchart-arrowtext'>9</div></div><div id='top10artistchart-image'><img src='/images/track/small/18795473.jpg?version=58068' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>AMELIE LENS</div>
+                    <div id='top10trackchart-title'><strong>Breathe</strong></div>
+                    <div id='top10trackchart-points'><strong>9792</strong> POINTS / <strong>155</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/breathe/18795473' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18795473' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/16938864'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>19<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 24 in the last month'></div><div id='top10artistchart-arrowtext'>24</div></div><div id='top10artistchart-image'><img src='/images/track/small/16938864.jpg?version=29474' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MADDIX</div>
+                    <div id='top10trackchart-title'><strong>Heute Nacht</strong></div>
+                    <div id='top10trackchart-points'><strong>9717</strong> POINTS / <strong>130</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/heute-nacht/16938864' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='16938864' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/1794068'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>20</div><div id='top10artistchart-image'><img src='/images/track/small/1794068.jpg?version=49976' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>TIESTO</div>
+                    <div id='top10trackchart-title'><strong>Adagio For Strings</strong></div>
+                    <div id='top10trackchart-points'><strong>9630</strong> POINTS / <strong>270</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/adagio-for-strings/1794068' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='1794068' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18117345'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>21</div><div id='top10artistchart-image'><img src='/images/track/small/18117345.jpg?version=49539' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>CHARLOTTE DE WITTE</div>
+                    <div id='top10trackchart-title'><strong>High Street (Amazingblaze Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>9487</strong> POINTS / <strong>162</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/high-street/18117345' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18117345' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18758309'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>22<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 16 in the last month'></div><div id='top10artistchart-arrowtext'>16</div></div><div id='top10artistchart-image'><img src='/images/track/small/18758309.jpg?version=28854' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>THOMAS SCHUMACHER, TECHNOHEAD</div>
+                    <div id='top10trackchart-title'><strong>The Passion 2024</strong></div>
+                    <div id='top10trackchart-points'><strong>8579</strong> POINTS / <strong>129</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/the-passion-2024/18758309' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18758309' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18461984'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>23<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 6 in the last month'></div><div id='top10artistchart-arrowtext'>6</div></div><div id='top10artistchart-image'><img src='/images/track/small/18461984.jpg?version=37829' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>UEBERREST</div>
+                    <div id='top10trackchart-title'><strong>You Know What</strong></div>
+                    <div id='top10trackchart-points'><strong>8480</strong> POINTS / <strong>191</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/you-know-what/18461984' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18461984' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18771092'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>24<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 18 in the last month'></div><div id='top10artistchart-arrowtext'>18</div></div><div id='top10artistchart-image'><img src='/images/track/small/18771092.jpg?version=5626' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>LUSU</div>
+                    <div id='top10trackchart-title'><strong>Ready 4 The Bass</strong></div>
+                    <div id='top10trackchart-points'><strong>8410</strong> POINTS / <strong>129</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/ready-4-the-bass/18771092' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18771092' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17278715'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>25</div><div id='top10artistchart-image'><img src='/images/track/small/17278715.jpg?version=55831' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>AMAZINGBLAZE</div>
+                    <div id='top10trackchart-title'><strong>Can't Stop</strong></div>
+                    <div id='top10trackchart-points'><strong>7773</strong> POINTS / <strong>201</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/cant-stop/17278715' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17278715' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18554437'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>26</div><div id='top10artistchart-image'><img src='/images/track/small/18554437.jpg?version=48758' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>FERRY CORSTEN, MARSH</div>
+                    <div id='top10trackchart-title'><strong>Fulfillment</strong></div>
+                    <div id='top10trackchart-points'><strong>7739</strong> POINTS / <strong>135</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/fulfillment/18554437' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18554437' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18943388'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>27<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 50 in the last month'></div><div id='top10artistchart-arrowtext'>50</div></div><div id='top10artistchart-image'><img src='/images/track/small/18943388.jpg?version=5521' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>YOTTO</div>
+                    <div id='top10trackchart-title'><strong>Heartbeat</strong></div>
+                    <div id='top10trackchart-points'><strong>7683</strong> POINTS / <strong>100</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/heartbeat/18943388' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18943388' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18121255'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>28</div><div id='top10artistchart-image'><img src='/images/track/small/18121255.jpg?version=35408' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>GIUSEPPE OTTAVIANI, ALEX SONATA & THERIO, TISHMAL</div>
+                    <div id='top10trackchart-title'><strong>Tears Of The Kingdom feat. Tishmal</strong></div>
+                    <div id='top10trackchart-points'><strong>7434</strong> POINTS / <strong>118</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/tears-of-the-kingdom-feat-tishmal/18121255' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18121255' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18668481'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>29</div><div id='top10artistchart-image'><img src='/images/track/small/18668481.jpg?version=9945' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SIGNUM, SCOTT MAC, BEN NICKY, HANNAH LAING, PAUL FINDLAY</div>
+                    <div id='top10trackchart-title'><strong>Coming On Strong feat. Scott Mac</strong></div>
+                    <div id='top10trackchart-points'><strong>7023</strong> POINTS / <strong>114</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/coming-on-strong-feat-scott-mac/18668481' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18668481' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19151190'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>30<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 300 in the last month'></div><div id='top10artistchart-arrowtext'>300</div></div><div id='top10artistchart-image'><img src='/images/track/small/19151190.jpg?version=50219' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BILLY GILLIES, BETSY</div>
+                    <div id='top10trackchart-title'><strong>Fair [Extended Mix]</strong></div>
+                    <div id='top10trackchart-points'><strong>6638</strong> POINTS / <strong>72</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/fair-extended-mix/19151190' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19151190' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18354316'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>31</div><div id='top10artistchart-image'><img src='/images/track/small/18354316.jpg?version=33341' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>GARETH EMERY, ANNABEL, LSR/CITY</div>
+                    <div id='top10trackchart-title'><strong>house in the streetlight</strong></div>
+                    <div id='top10trackchart-points'><strong>6343</strong> POINTS / <strong>88</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/house-in-the-streetlight/18354316' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18354316' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18052708'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>32</div><div id='top10artistchart-image'><img src='/images/track/small/18052708.jpg?version=8050' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN, ANNE GUDRUN</div>
+                    <div id='top10trackchart-title'><strong>Love Is A Drug feat. Anne Gudrun</strong></div>
+                    <div id='top10trackchart-points'><strong>6277</strong> POINTS / <strong>70</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #ff6c77;'>MAINSTAGE</span></div></div>
+                    <a href='https://www.beatport.com/track/love-is-a-drug-feat-anne-gudrun/18052708' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18052708' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18295509'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>33</div><div id='top10artistchart-image'><img src='/images/track/small/18295509.jpg?version=61220' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>WESTEND</div>
+                    <div id='top10trackchart-title'><strong>Dirty Blonde</strong></div>
+                    <div id='top10trackchart-points'><strong>6245</strong> POINTS / <strong>86</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/dirty-blonde/18295509' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18295509' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17947183'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>34</div><div id='top10artistchart-image'><img src='/images/track/small/17947183.jpg?version=14995' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JEAN LUC, NICK JAY</div>
+                    <div id='top10trackchart-title'><strong>Ayla 2023</strong></div>
+                    <div id='top10trackchart-points'><strong>6200</strong> POINTS / <strong>119</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/ayla-2023/17947183' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17947183' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19046106'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>35<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 549 in the last month'></div><div id='top10artistchart-arrowtext'>549</div></div><div id='top10artistchart-image'><img src='/images/track/small/19046106.jpg?version=46477' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>THOMAS SCHUMACHER</div>
+                    <div id='top10trackchart-title'><strong>Final Fantasy</strong></div>
+                    <div id='top10trackchart-points'><strong>6080</strong> POINTS / <strong>65</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/final-fantasy/19046106' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19046106' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18303354'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>36</div><div id='top10artistchart-image'><img src='/images/track/small/18303354.jpg?version=1383' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BLUE SERIGALA</div>
+                    <div id='top10trackchart-title'><strong>Come Closer (Will Rees Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>6035</strong> POINTS / <strong>83</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/come-closer/18303354' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18303354' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18580712'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>37</div><div id='top10artistchart-image'><img src='/images/track/small/18580712.jpg?version=7707' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ABOVE & BEYOND, ZOE JOHNSTON</div>
+                    <div id='top10trackchart-title'><strong>Crazy Love feat. Zoë Johnston</strong></div>
+                    <div id='top10trackchart-points'><strong>5986</strong> POINTS / <strong>87</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/crazy-love-feat-zoe-johnston/18580712' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18580712' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19018646'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>38<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 55 in the last month'></div><div id='top10artistchart-arrowtext'>55</div></div><div id='top10artistchart-image'><img src='/images/track/small/19018646.jpg?version=13498' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>KOBOSIL, UEBERREST</div>
+                    <div id='top10trackchart-title'><strong>Radiance</strong></div>
+                    <div id='top10trackchart-points'><strong>5816</strong> POINTS / <strong>96</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/radiance/19018646' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19018646' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/13033574'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>39<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 9 in the last month'></div><div id='top10artistchart-arrowtext'>9</div></div><div id='top10artistchart-image'><img src='/images/track/small/13033574.jpg?version=31889' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ABOVE & BEYOND</div>
+                    <div id='top10trackchart-title'><strong>Blue Monday</strong></div>
+                    <div id='top10trackchart-points'><strong>5745</strong> POINTS / <strong>139</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/blue-monday/13033574' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='13033574' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18086668'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>40</div><div id='top10artistchart-image'><img src='/images/track/small/18086668.jpg?version=56542' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>STEVE DEKAY</div>
+                    <div id='top10trackchart-title'><strong>Played-A-Live</strong></div>
+                    <div id='top10trackchart-points'><strong>5689</strong> POINTS / <strong>90</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/played-a-live/18086668' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18086668' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18254854'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>41<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18254854.jpg?version=47978' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BRYAN KEARNEY, PLUMB</div>
+                    <div id='top10trackchart-title'><strong>All Over Again (Sean Tyas & David Elston Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>5424</strong> POINTS / <strong>77</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/all-over-again/18254854' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18254854' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18035869'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>42<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18035869.jpg?version=28818' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SNEIJDER, NAT CONWAY</div>
+                    <div id='top10trackchart-title'><strong>Everybody's Free</strong></div>
+                    <div id='top10trackchart-points'><strong>5407</strong> POINTS / <strong>84</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/everybodys-free/18035869' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18035869' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18985734'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>43<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 348 in the last month'></div><div id='top10artistchart-arrowtext'>348</div></div><div id='top10artistchart-image'><img src='/images/track/small/18985734.jpg?version=41499' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>TALLA 2XLC, ZYRUS 7</div>
+                    <div id='top10trackchart-title'><strong>1998</strong></div>
+                    <div id='top10trackchart-points'><strong>5390</strong> POINTS / <strong>70</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/1998/18985734' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18985734' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17448780'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>44</div><div id='top10artistchart-image'><img src='/images/track/small/17448780.jpg?version=20099' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>EELKE KLEIJN</div>
+                    <div id='top10trackchart-title'><strong>Transmission (Armin van Buuren Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>5366</strong> POINTS / <strong>153</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/transmission/17448780' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17448780' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18863071'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>45<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 46 in the last month'></div><div id='top10artistchart-arrowtext'>46</div></div><div id='top10artistchart-image'><img src='/images/track/small/18863071.jpg?version=48290' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>TIMMO</div>
+                    <div id='top10trackchart-title'><strong>Losing Control</strong></div>
+                    <div id='top10trackchart-points'><strong>5308</strong> POINTS / <strong>96</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/losing-control/18863071' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18863071' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18231063'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>46<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18231063.jpg?version=42740' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JOHN O'CALLAGHAN, GIUSEPPE OTTAVIANI</div>
+                    <div id='top10trackchart-title'><strong>Cloudsurfer (A Dreamstate Anthem)</strong></div>
+                    <div id='top10trackchart-points'><strong>5221</strong> POINTS / <strong>73</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/cloudsurfer-a-dreamstate-anthem/18231063' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18231063' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18283953'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>47<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18283953.jpg?version=48516' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BRYAN KEARNEY</div>
+                    <div id='top10trackchart-title'><strong>Te Amo (Cold Blue Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>5120</strong> POINTS / <strong>73</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/te-amo/18283953' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18283953' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18000512'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>48<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 50 in the last month'></div><div id='top10artistchart-arrowtext'>50</div></div><div id='top10artistchart-image'><img src='/images/track/small/18000512.jpg?version=831' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>CHERRYMOON TRAX</div>
+                    <div id='top10trackchart-title'><strong>The House Of House (1994 Remix By Thomas Schumacher)</strong></div>
+                    <div id='top10trackchart-points'><strong>5050</strong> POINTS / <strong>115</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/the-house-of-house/18000512' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18000512' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18750980'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>49<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 12 in the last month'></div><div id='top10artistchart-arrowtext'>12</div></div><div id='top10artistchart-image'><img src='/images/track/small/18750980.jpg?version=24039' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>DRUNKEN KONG</div>
+                    <div id='top10trackchart-title'><strong>Higher State</strong></div>
+                    <div id='top10trackchart-points'><strong>4893</strong> POINTS / <strong>84</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/higher-state/18750980' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18750980' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18519640'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>50<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18519640.jpg?version=15745' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ELI & FUR</div>
+                    <div id='top10trackchart-title'><strong>You're So High (10 Years On) (Sasha Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4852</strong> POINTS / <strong>82</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/youre-so-high-10-years-on/18519640' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18519640' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19156616'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>51</div><div id='top10artistchart-image'><img src='/images/track/small/19156616.jpg?version=40507' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>DAVID FORBES</div>
+                    <div id='top10trackchart-title'><strong>Alcazar</strong></div>
+                    <div id='top10trackchart-points'><strong>4789</strong> POINTS / <strong>51</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/alcazar/19156616' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19156616' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17767046'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>52</div><div id='top10artistchart-image'><img src='/images/track/small/17767046.jpg?version=54833' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>VIZIONN</div>
+                    <div id='top10trackchart-title'><strong>Run</strong></div>
+                    <div id='top10trackchart-points'><strong>4762</strong> POINTS / <strong>134</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/run/17767046' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17767046' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18348161'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>53<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18348161.jpg?version=35917' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>STONEFACE & TERMINAL</div>
+                    <div id='top10trackchart-title'><strong>North Cape (Asteroid Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4752</strong> POINTS / <strong>54</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/north-cape/18348161' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18348161' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18062017'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>54<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18062017.jpg?version=2196' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JOHN O'CALLAGHAN</div>
+                    <div id='top10trackchart-title'><strong>Riverside</strong></div>
+                    <div id='top10trackchart-points'><strong>4715</strong> POINTS / <strong>75</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/riverside/18062017' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18062017' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17987524'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>55<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/17987524.jpg?version=40884' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>TALLA 2XLC, GID SEDGWICK</div>
+                    <div id='top10trackchart-title'><strong>Forever Young</strong></div>
+                    <div id='top10trackchart-points'><strong>4679</strong> POINTS / <strong>83</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/forever-young/17987524' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17987524' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18504630'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>56<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18504630.jpg?version=42939' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SØNIN</div>
+                    <div id='top10trackchart-title'><strong>Nano</strong></div>
+                    <div id='top10trackchart-points'><strong>4633</strong> POINTS / <strong>56</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/nano/18504630' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18504630' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18092882'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>57<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18092882.jpg?version=60896' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>RAPID EYE</div>
+                    <div id='top10trackchart-title'><strong>Circa-Forever (Markus Schulz Down the Rabbit Hole Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4588</strong> POINTS / <strong>77</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/circa-forever/18092882' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18092882' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18626355'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>58<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18626355.jpg?version=52613' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ALY & FILA, LOSTLY</div>
+                    <div id='top10trackchart-title'><strong>The Unknown</strong></div>
+                    <div id='top10trackchart-points'><strong>4563</strong> POINTS / <strong>71</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/the-unknown/18626355' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18626355' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18070804'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>59<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18070804.jpg?version=33851' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SNEIJDER, SHUGZ, MULTUNES</div>
+                    <div id='top10trackchart-title'><strong>Bass Keeps Pumpin'</strong></div>
+                    <div id='top10trackchart-points'><strong>4547</strong> POINTS / <strong>88</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/bass-keeps-pumpin/18070804' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18070804' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18294676'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>60<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18294676.jpg?version=47023' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>LANGE, SKYE</div>
+                    <div id='top10trackchart-title'><strong>Drifting Away feat. Skye (Marsh Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4412</strong> POINTS / <strong>55</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/drifting-away-feat-skye/18294676' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18294676' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19188663'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>61</div><div id='top10artistchart-image'><img src='/images/track/small/19188663.jpg?version=55609' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>FELIX</div>
+                    <div id='top10trackchart-title'><strong>Don't You Want Me (KI/KI Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4400</strong> POINTS / <strong>44</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/dont-you-want-me/19188663' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19188663' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18381077'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>62<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18381077.jpg?version=40300' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>BK</div>
+                    <div id='top10trackchart-title'><strong>You Are The Master</strong></div>
+                    <div id='top10trackchart-points'><strong>4375</strong> POINTS / <strong>52</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/you-are-the-master/18381077' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18381077' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18334108'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>63<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18334108.jpg?version=27553' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>PAUL DENTON</div>
+                    <div id='top10trackchart-title'><strong>Global Consciousness</strong></div>
+                    <div id='top10trackchart-points'><strong>4372</strong> POINTS / <strong>58</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/global-consciousness/18334108' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18334108' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18844757'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>64<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18844757.jpg?version=36706' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>LANGE, SKYE</div>
+                    <div id='top10trackchart-title'><strong>Drifting Away (Alessandra Roncone Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4361</strong> POINTS / <strong>60</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/drifting-away/18844757' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18844757' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18204001'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>65<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18204001.jpg?version=17928' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>WILL REES</div>
+                    <div id='top10trackchart-title'><strong>Sanctuary</strong></div>
+                    <div id='top10trackchart-points'><strong>4343</strong> POINTS / <strong>70</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/sanctuary/18204001' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18204001' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18834274'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>66<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 6 in the last month'></div><div id='top10artistchart-arrowtext'>6</div></div><div id='top10artistchart-image'><img src='/images/track/small/18834274.jpg?version=27592' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MAOR LEVI, ILAN BLUESTONE, EMMA HEWITT, ELYSIAN (UK)</div>
+                    <div id='top10trackchart-title'><strong>Now We Are Free feat. Ilan Bluestone feat. Emma Hewitt feat. Maor Levi</strong></div>
+                    <div id='top10trackchart-points'><strong>4335</strong> POINTS / <strong>71</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/now-we-are-free-feat-ilan-bluestone-feat-emma-hewitt-feat-maor-levi/18834274' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18834274' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18158093'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>67<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18158093.jpg?version=41294' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>NG REZONANCE, PHD, AVAXX</div>
+                    <div id='top10trackchart-title'><strong>Lost in the Music</strong></div>
+                    <div id='top10trackchart-points'><strong>4332</strong> POINTS / <strong>63</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/lost-in-the-music/18158093' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18158093' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19100007'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>68<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 546 in the last month'></div><div id='top10artistchart-arrowtext'>546</div></div><div id='top10artistchart-image'><img src='/images/track/small/19100007.jpg?version=59875' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ALY & FILA, RICHARD DURAND</div>
+                    <div id='top10trackchart-title'><strong>Nebula</strong></div>
+                    <div id='top10trackchart-points'><strong>4310</strong> POINTS / <strong>63</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/nebula/19100007' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19100007' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17701243'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>69</div><div id='top10artistchart-image'><img src='/images/track/small/17701243.jpg?version=26022' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>FRANKYEFFE</div>
+                    <div id='top10trackchart-title'><strong>Touch Me</strong></div>
+                    <div id='top10trackchart-points'><strong>4289</strong> POINTS / <strong>88</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/touch-me/17701243' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17701243' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19029173'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>70</div><div id='top10artistchart-image'><img src='/images/track/small/19029173.jpg?version=1660' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>DARREN PORTER, XIJARO & PITCH</div>
+                    <div id='top10trackchart-title'><strong>Reach for the Stars</strong></div>
+                    <div id='top10trackchart-points'><strong>4280</strong> POINTS / <strong>51</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/reach-for-the-stars/19029173' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19029173' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18212185'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>71<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18212185.jpg?version=9759' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JASON ROSS, DIA FRAMPTON</div>
+                    <div id='top10trackchart-title'><strong>Never Alone feat. Dia Frampton</strong></div>
+                    <div id='top10trackchart-points'><strong>4229</strong> POINTS / <strong>71</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/never-alone-feat-dia-frampton/18212185' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18212185' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19102557'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>72<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 298 in the last month'></div><div id='top10artistchart-arrowtext'>298</div></div><div id='top10artistchart-image'><img src='/images/track/small/19102557.jpg?version=41624' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JEROME ISMA-AE</div>
+                    <div id='top10trackchart-title'><strong>Hold That Sucker Down (Hel:sløwed Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4223</strong> POINTS / <strong>63</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/hold-that-sucker-down/19102557' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19102557' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17981832'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>73<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/17981832.jpg?version=22751' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN</div>
+                    <div id='top10trackchart-title'><strong>Lose This Feeling</strong></div>
+                    <div id='top10trackchart-points'><strong>4194</strong> POINTS / <strong>97</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/lose-this-feeling/17981832' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17981832' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18652643'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>74<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18652643.jpg?version=14918' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>DAXSON, NATION OF ONE</div>
+                    <div id='top10trackchart-title'><strong>Now Or Never (Craig Connelly Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>4098</strong> POINTS / <strong>55</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/now-or-never/18652643' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18652643' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18914025'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>75<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18914025.jpg?version=16302' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>WILL ATKINSON, ABI FLYNN, SCHAK</div>
+                    <div id='top10trackchart-title'><strong>Yesterday</strong></div>
+                    <div id='top10trackchart-points'><strong>4074</strong> POINTS / <strong>54</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/yesterday/18914025' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18914025' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18080598'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>76<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18080598.jpg?version=46221' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>JOHN ASKEW</div>
+                    <div id='top10trackchart-title'><strong>Afterburner</strong></div>
+                    <div id='top10trackchart-points'><strong>4047</strong> POINTS / <strong>70</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/afterburner/18080598' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18080598' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18244823'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>77<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18244823.jpg?version=11017' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ALLEN WATTS</div>
+                    <div id='top10trackchart-title'><strong>Lost In The Music</strong></div>
+                    <div id='top10trackchart-points'><strong>4032</strong> POINTS / <strong>57</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/lost-in-the-music/18244823' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18244823' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19025603'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>78<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 237 in the last month'></div><div id='top10artistchart-arrowtext'>237</div></div><div id='top10artistchart-image'><img src='/images/track/small/19025603.jpg?version=37146' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MATTY RALPH</div>
+                    <div id='top10trackchart-title'><strong>Te Adoro</strong></div>
+                    <div id='top10trackchart-points'><strong>4030</strong> POINTS / <strong>80</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/te-adoro/19025603' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19025603' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18135326'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>79<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18135326.jpg?version=18809' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>PAUL DENTON</div>
+                    <div id='top10trackchart-title'><strong>Siren</strong></div>
+                    <div id='top10trackchart-points'><strong>3978</strong> POINTS / <strong>50</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/siren/18135326' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18135326' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18213184'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>80<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 5 in the last month'></div><div id='top10artistchart-arrowtext'>5</div></div><div id='top10artistchart-image'><img src='/images/track/small/18213184.jpg?version=15058' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>COSMIC GATE</div>
+                    <div id='top10trackchart-title'><strong>The Truth 2.0</strong></div>
+                    <div id='top10trackchart-points'><strong>3972</strong> POINTS / <strong>79</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/the-truth-20/18213184' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18213184' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19008444'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>81<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 43 in the last month'></div><div id='top10artistchart-arrowtext'>43</div></div><div id='top10artistchart-image'><img src='/images/track/small/19008444.jpg?version=35521' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>KEY4050</div>
+                    <div id='top10trackchart-title'><strong>Feel Less</strong></div>
+                    <div id='top10trackchart-points'><strong>3951</strong> POINTS / <strong>58</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/feel-less/19008444' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19008444' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18374226'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>82<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 4 in the last month'></div><div id='top10artistchart-arrowtext'>4</div></div><div id='top10artistchart-image'><img src='/images/track/small/18374226.jpg?version=43602' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ARMIN VAN BUUREN, JUST_US</div>
+                    <div id='top10trackchart-title'><strong>Make It Count</strong></div>
+                    <div id='top10trackchart-points'><strong>3948</strong> POINTS / <strong>67</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/make-it-count/18374226' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18374226' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18264605'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>83<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 48 in the last month'></div><div id='top10artistchart-arrowtext'>48</div></div><div id='top10artistchart-image'><img src='/images/track/small/18264605.jpg?version=29847' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ETERA</div>
+                    <div id='top10trackchart-title'><strong>Funk You</strong></div>
+                    <div id='top10trackchart-points'><strong>3897</strong> POINTS / <strong>131</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/funk-you/18264605' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18264605' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18153234'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>84<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 3 in the last month'></div><div id='top10artistchart-arrowtext'>3</div></div><div id='top10artistchart-image'><img src='/images/track/small/18153234.jpg?version=39020' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>AARON HIBELL</div>
+                    <div id='top10trackchart-title'><strong>destroyer of worlds (Extended Mix)</strong></div>
+                    <div id='top10trackchart-points'><strong>3887</strong> POINTS / <strong>69</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/destroyer-of-worlds-extended-mix/18153234' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18153234' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18916115'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>85<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 227 in the last month'></div><div id='top10artistchart-arrowtext'>227</div></div><div id='top10artistchart-image'><img src='/images/track/small/18916115.jpg?version=8392' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MARHU</div>
+                    <div id='top10trackchart-title'><strong>La Monnaie</strong></div>
+                    <div id='top10trackchart-points'><strong>3809</strong> POINTS / <strong>75</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/la-monnaie/18916115' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18916115' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18553368'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>86<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/18553368.jpg?version=24223' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MARIA HEALY</div>
+                    <div id='top10trackchart-title'><strong>Street Rave</strong></div>
+                    <div id='top10trackchart-points'><strong>3753</strong> POINTS / <strong>49</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/street-rave/18553368' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18553368' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/17998797'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>87<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 2 in the last month'></div><div id='top10artistchart-arrowtext'>2</div></div><div id='top10artistchart-image'><img src='/images/track/small/17998797.jpg?version=59395' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ELEVVEN, ALEX SONATA & THERIO</div>
+                    <div id='top10trackchart-title'><strong>Hanalei</strong></div>
+                    <div id='top10trackchart-points'><strong>3730</strong> POINTS / <strong>72</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/hanalei/17998797' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='17998797' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19102108'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>88<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 289 in the last month'></div><div id='top10artistchart-arrowtext'>289</div></div><div id='top10artistchart-image'><img src='/images/track/small/19102108.jpg?version=13018' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>TRANCE WAX</div>
+                    <div id='top10trackchart-title'><strong>Ascend (Sneijder Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>3717</strong> POINTS / <strong>54</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/ascend/19102108' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19102108' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/1200252'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>89</div><div id='top10artistchart-image'><img src='/images/track/small/1200252.jpg?version=5666' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ATB</div>
+                    <div id='top10trackchart-title'><strong>9Pm (Till I Come)</strong></div>
+                    <div id='top10trackchart-points'><strong>3689</strong> POINTS / <strong>117</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/9pm-till-i-come/1200252' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='1200252' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18729558'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>90</div><div id='top10artistchart-image'><img src='/images/track/small/18729558.jpg?version=39653' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>COLD BLUE, NICOLE WILLERTON</div>
+                    <div id='top10trackchart-title'><strong>All I See Is You</strong></div>
+                    <div id='top10trackchart-points'><strong>3600</strong> POINTS / <strong>50</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/all-i-see-is-you/18729558' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18729558' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19106356'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>91<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 507 in the last month'></div><div id='top10artistchart-arrowtext'>507</div></div><div id='top10artistchart-image'><img src='/images/track/small/19106356.jpg?version=38251' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>CRAIG CONNELLY, JAMES COTTLE, LIEL KOLET</div>
+                    <div id='top10trackchart-title'><strong>Be As One</strong></div>
+                    <div id='top10trackchart-points'><strong>3598</strong> POINTS / <strong>47</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/be-as-one/19106356' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19106356' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18542331'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>92</div><div id='top10artistchart-image'><img src='/images/track/small/18542331.jpg?version=61576' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SNEIJDER</div>
+                    <div id='top10trackchart-title'><strong>In and Out of My Life (Will Rees Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>3570</strong> POINTS / <strong>42</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/in-and-out-of-my-life/18542331' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18542331' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19203190'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>93</div><div id='top10artistchart-image'><img src='/images/track/small/19203190.jpg?version=43862' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>THE SPACE BROTHERS</div>
+                    <div id='top10trackchart-title'><strong>Shine (Ciaran McAuley Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>3550</strong> POINTS / <strong>44</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/shine/19203190' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19203190' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18695961'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>94</div><div id='top10artistchart-image'><img src='/images/track/small/18695961.jpg?version=20103' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>SIMON PATTERSON</div>
+                    <div id='top10trackchart-title'><strong>Do Do Do</strong></div>
+                    <div id='top10trackchart-points'><strong>3546</strong> POINTS / <strong>48</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/do-do-do/18695961' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18695961' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18478002'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>95<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18478002.jpg?version=39127' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>CRAIG CONNELLY, CARI</div>
+                    <div id='top10trackchart-title'><strong>Breathe Again</strong></div>
+                    <div id='top10trackchart-points'><strong>3528</strong> POINTS / <strong>42</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/breathe-again/18478002' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18478002' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18989269'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>96<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 371 in the last month'></div><div id='top10artistchart-arrowtext'>371</div></div><div id='top10artistchart-image'><img src='/images/track/small/18989269.jpg?version=36404' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>MARCEL WOODS</div>
+                    <div id='top10trackchart-title'><strong>Lemon Tree (South Of The Stars Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>3480</strong> POINTS / <strong>51</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/lemon-tree/18989269' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18989269' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18062320'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>97<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18062320.jpg?version=12649' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ALLEN WATTS</div>
+                    <div id='top10trackchart-title'><strong>Set Me Free</strong></div>
+                    <div id='top10trackchart-points'><strong>3462</strong> POINTS / <strong>61</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/set-me-free/18062320' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18062320' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18402572'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>98<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 29 in the last month'></div><div id='top10artistchart-arrowtext'>29</div></div><div id='top10artistchart-image'><img src='/images/track/small/18402572.jpg?version=21439' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>HOUSEWERK, T78, DUCAMP</div>
+                    <div id='top10trackchart-title'><strong>Rave Nation</strong></div>
+                    <div id='top10trackchart-points'><strong>3452</strong> POINTS / <strong>86</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/rave-nation/18402572' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18402572' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18626931'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>99<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 1 in the last month'></div><div id='top10artistchart-arrowtext'>1</div></div><div id='top10artistchart-image'><img src='/images/track/small/18626931.jpg?version=23449' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>AIROD</div>
+                    <div id='top10trackchart-title'><strong>Blackout</strong></div>
+                    <div id='top10trackchart-points'><strong>3445</strong> POINTS / <strong>68</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/blackout/18626931' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18626931' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/18643207'>
+            <div id='top10artistchart-full'><div id='top10artistchart-number'>100<div id='top10artistchart-arrow'><img src='/_images/interface/uparrow_green.png' width='16' height='16' title='UP 16 in the last month'></div><div id='top10artistchart-arrowtext'>16</div></div><div id='top10artistchart-image'><img src='/images/track/small/18643207.jpg?version=18881' height='50'></div>
+                <div id='top10trackchart-text-large'>
+                    <div id='top10trackchart-artistname'>ALIGNMENT</div>
+                    <div id='top10trackchart-title'><strong>Malfunction</strong></div>
+                    <div id='top10trackchart-points'><strong>3445</strong> POINTS / <strong>85</strong> DAYS<div id='genreplacement'><span class='curved-box' style='background-color: #2b908f;'>TRANCE (MAIN FLOOR)</span></div></div>
+                    <a href='https://www.beatport.com/track/malfunction/18643207' target='_blank'><div id='shopping-icon-full'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='18643207' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon-full'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><div id='top10artistchart-footer'><span class='charttextname-c'> PAGE 1 of 19 <a href='/tracks/home/list?genre=7&period=2&page=2'> | NEXT PAGE</a></span> </div>            <br><br><br><br><br><br>
+        </div>
+
+        <div id='content-column3'>
+            <div id="top10artistchart-header"><span class="charttextname-a">TRENDING <strong>TRACKS</strong></span></div><a href='/track/track/19294569'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>2</div><div id='top10artistchart-image'><img src='/images/track/small/19294569.jpg?version=14180' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>BEN GOLD, BO BRUCE</div>
+                    <div id='top10trackchart-title'><strong>Half Light</strong></div>
+                    <div id='top10trackchart-points'><strong>1357</strong> POINTS / <strong>14</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/half-light/19294569' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19294569' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19306701'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>13</div><div id='top10artistchart-image'><img src='/images/track/small/19306701.jpg?version=28299' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>MARK WILKS</div>
+                    <div id='top10trackchart-title'><strong>Voice In The Dark</strong></div>
+                    <div id='top10trackchart-points'><strong>1172</strong> POINTS / <strong>14</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/voice-in-the-dark/19306701' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19306701' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19326944'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>19</div><div id='top10artistchart-image'><img src='/images/track/small/19326944.jpg?version=30086' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>VLIND, EDRDO, GABRIELLE ESCAMI...</div>
+                    <div id='top10trackchart-title'><strong>Ethereal Darkness feat. Gabrielle Escamilla</strong></div>
+                    <div id='top10trackchart-points'><strong>1030</strong> POINTS / <strong>13</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/ethereal-darkness-feat-gabrielle-escamilla/19326944' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19326944' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19307446'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>20</div><div id='top10artistchart-image'><img src='/images/track/small/19307446.jpg?version=13132' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>TALLA 2XLC, SUNBEAM, TALLA 2XL...</div>
+                    <div id='top10trackchart-title'><strong>Arms Of Heaven</strong></div>
+                    <div id='top10trackchart-points'><strong>1018</strong> POINTS / <strong>14</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/arms-of-heaven/19307446' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19307446' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19261900'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>23</div><div id='top10artistchart-image'><img src='/images/track/small/19261900.jpg?version=7626' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>KYAU & ALBERT</div>
+                    <div id='top10trackchart-title'><strong>Photographs</strong></div>
+                    <div id='top10trackchart-points'><strong>950</strong> POINTS / <strong>14</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/photographs/19261900' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19261900' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19271392'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>24</div><div id='top10artistchart-image'><img src='/images/track/small/19271392.jpg?version=31716' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>ONTUNE</div>
+                    <div id='top10trackchart-title'><strong>Panaceum</strong></div>
+                    <div id='top10trackchart-points'><strong>933</strong> POINTS / <strong>14</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/panaceum/19271392' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19271392' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19315820'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>30</div><div id='top10artistchart-image'><img src='/images/track/small/19315820.jpg?version=50521' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>TYLER JACK</div>
+                    <div id='top10trackchart-title'><strong>Losing My Mind</strong></div>
+                    <div id='top10trackchart-points'><strong>818</strong> POINTS / <strong>12</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/losing-my-mind/19315820' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19315820' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19318224'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>33</div><div id='top10artistchart-image'><img src='/images/track/small/19318224.jpg?version=58392' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>SIMON PATTERSON</div>
+                    <div id='top10trackchart-title'><strong>Lost Vagueness</strong></div>
+                    <div id='top10trackchart-points'><strong>796</strong> POINTS / <strong>9</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/lost-vagueness/19318224' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19318224' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19315690'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>37</div><div id='top10artistchart-image'><img src='/images/track/small/19315690.jpg?version=7613' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>DARREN PORTER, MERCURIAL VIRUS</div>
+                    <div id='top10trackchart-title'><strong>One Life</strong></div>
+                    <div id='top10trackchart-points'><strong>770</strong> POINTS / <strong>9</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/one-life/19315690' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19315690' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><a href='/track/track/19351252'>
+            <div id='top10artistchart'><div id='top10artistchart-number'>38</div><div id='top10artistchart-image'><img src='/images/track/small/19351252.jpg?version=9290' height='50'></div>
+                <div id='top10trackchart-text'>
+                    <div id='top10trackchart-artistname'>JOHN OCALLAGHAN, ALEX HOLMES</div>
+                    <div id='top10trackchart-title'><strong>Devotion (Cold Blue Extended Remix)</strong></div>
+                    <div id='top10trackchart-points'><strong>751</strong> POINTS / <strong>9</strong> DAYS</div>
+                    <a href='https://www.beatport.com/track/devotion/19351252' target='_blank'><div id='shopping-icon'><img src='/_images/interface/shopping_icon_alpha.png' width='20' height='20'></div></a>
+                    <a href='#' onclick="if (!window.__cfRLUnblockHandlers) return false; audioplayerget(this.id);return false;" id='19351252' data-cf-modified-e50a99ba960e0c3b516ab364-=""><div id='play-icon'><img src='/_images/interface/play_icon_alpha.png' width='22' height='22'></div></a>
+                </div>
+            </div></a><div id='top10artistchart-footer'><span class='charttextname-c'>TOP <strong>NEW</strong> TRACKS OVER LAST 14 DAYS</span>
+        </div>            <br><br><br><br><br><br>
+        </div>
+
+
+        <br><br><br><br>
+
+    </div><!-- #content -->
+    <br>
+
+
+</div><!-- #container -->
+<div id="footer">
+
+
+
+
+
+    <div id='headercontainer'>
+
+        <div id='footer-about'><a href='/about/home/list'><img src="/_images/interface/about.png" height="30" alt=""/> </a></div>
+        <div id='footer-faq'><a href='/faq/home/list'><img src="/_images/interface/faq.png" height="30" alt=""/> </a></div>
+        <div id='footer-contact'><a href='/contact/home/list'><img src="/_images/interface/contact.png" height="30" alt=""/> </a></div>
+        <div id='footer-features'><a href='/features/home/list'><img src="/_images/interface/features.png" height="30" alt=""/> </a></div>
+
+
+        <div id='BS-LOGO'><a href='/'><img src="/_images/interface/logo_bs.png" height="66" alt=""/> </a></div>
+        <div id="ko-fi">
+
+
+
+
+
+
+
+            <div id="targetElement"></div>
+
+            <a href='https://ko-fi.com/S6S8G2LBL' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></div>
+
+        <script type="e50a99ba960e0c3b516ab364-text/javascript">
+            $(document).ready(function() {
+                // Function to load the content
+                function loadContent() {
+                    $.ajax({
+                        url: "https://www.beatstats.com/_loader/loader.php",
+                        type: "GET",
+                        cache: false,
+                        success: function(response) {
+                            // Inject the fetched content into the target element
+                            $('#targetElement').html(response);
+                        },
+                        error: function(xhr, status, error) {
+                            // Do nothing on error
+                        }
+                    });
+                }
+
+                // Call the function to load content
+                loadContent();
+            });
+        </script>
+
+
+    </div>
+</div><!-- #footer -->
+
+
+
+
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e50a99ba960e0c3b516ab364-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8b90d33608336191',t:'MTcyNDY0Mzg4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8b90d33608336191","serverTiming":{"name":{"cfL4":true}},"version":"2024.8.0","token":"6d4a97d7cb67428d9ba41da645b1f6a9"}' crossorigin="anonymous"></script>
+</body>
+</html>
+

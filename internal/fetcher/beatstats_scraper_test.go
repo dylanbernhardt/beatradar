@@ -4,19 +4,29 @@ import (
 	"context"
 	"net/http"
 	"net/http/httptest"
+	"os"
+	"path/filepath"
 	"testing"
 	"time"
+
+	"github.com/dylanbernhardt/beatradar/internal/models"
 )
 
+func loadTestHTML(t *testing.T) string {
+	t.Helper()
+	path := filepath.Join("testdata", "beatstats_sample.html")
+	content, err := os.ReadFile(path)
+	if err != nil {
+		t.Fatalf("Failed to read test HTML file: %v", err)
+	}
+	return string(content)
+}
+
 func TestBeatstatsScraperFetchSongs(t *testing.T) {
+	testHTML := loadTestHTML(t)
+
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		// TODO mock HTML that your scraper expects
-		w.Write([]byte(`
-            <div class="track-row">
-                <div class="track-title"><a href="/song/1">Test Song</a></div>
-                <div class="track-artists">Test Artist</div>
-            </div>
-        `))
+		w.Write([]byte(testHTML))
 	}))
 	defer server.Close()
 
@@ -27,17 +37,32 @@ func TestBeatstatsScraperFetchSongs(t *testing.T) {
 		t.Fatalf("FetchSongs failed: %v", err)
 	}
 
-	if len(songs) != 1 {
-		t.Fatalf("Expected 1 song, got %d", len(songs))
+	// TODO Add assertions based on the actual content from Beatstats
+	if len(songs) == 0 {
+		t.Fatalf("Expected to find songs, but got none")
 	}
 
-	if songs[0].Title != "Test Song" {
-		t.Errorf("Expected song title 'Test Song', got '%s'", songs[0].Title)
+	// TODO Check for a specific song you know should be in the results
+	// TODO adjust these based on the actual content of your sample
+	expectedSong := models.Song{
+		Title:  "Expected Song Title",
+		Artist: "Expected Artist",
+		// TODO Add other fields
 	}
 
-	if songs[0].Artist != "Test Artist" {
-		t.Errorf("Expected artist 'Test Artist', got '%s'", songs[0].Artist)
+	found := false
+	for _, song := range songs {
+		if song.Title == expectedSong.Title && song.Artist == expectedSong.Artist {
+			found = true
+			break
+		}
 	}
+
+	if !found {
+		t.Errorf("Did not find the expected song: %v", expectedSong)
+	}
+
+	// TODO Add more specific checks based on the actual data
 }
 
 func TestBeatstatsScraperFetchSongDetails(t *testing.T) {
