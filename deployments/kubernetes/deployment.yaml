@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beatradar
+  labels:
+    app: beatradar
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: beatradar
+  template:
+    metadata:
+      labels:
+        app: beatradar
+    spec:
+      containers:
+        - name: beatradar
+          image: your-docker-registry.com/beatradar:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+            - name: BEATSTATS_URL
+              value: "https://www.beatstats.com"
+            - name: REDIS_URL
+              valueFrom:
+                secretKeyRef:
+                  name: beatradar-secrets
+                  key: redis-url
+            - name: CACHE_TTL
+              value: "86400"  # 24 hours in seconds
+            - name: SCRAPER_TIMEOUT
+              value: "30"  # 30 seconds
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 10

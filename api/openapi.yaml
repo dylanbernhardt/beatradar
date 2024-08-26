@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Beat Radar API
+  description: API for fetching and managing music tracks from Beatstats
+  version: 1.0.0
+servers:
+  - url: https://api.beatradar.app/v1
+    description: Production server
+  - url: https://staging-api.beatradar.app/v1
+    description: Staging server
+paths:
+  /songs:
+    get:
+      summary: Fetch songs
+      description: Retrieve a list of songs based on genre and date
+      parameters:
+        - in: query
+          name: genre
+          required: true
+          schema:
+            type: string
+          description: The genre of songs to fetch
+        - in: query
+          name: date
+          required: true
+          schema:
+            type: string
+            format: date
+          description: The release date to fetch songs for (YYYY-MM-DD)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Song'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    Song:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        artist:
+          type: string
+        remix_artist:
+          type: string
+        genre:
+          type: string
+        release_date:
+          type: string
+          format: date
+        label:
+          type: string
+        bpm:
+          type: integer
+        key:
+          type: string
+        length:
+          type: integer
+          description: Duration in seconds
+        url:
+          type: string
+          format: uri
+        artwork:
+          type: string
+          format: uri
+        preview:
+          type: string
+          format: uri
+      required:
+        - id
+        - title
+        - artist
+        - genre
+        - release_date
