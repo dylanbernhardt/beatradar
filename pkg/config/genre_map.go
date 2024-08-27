@@ -30,7 +30,7 @@ var GenreMap = map[string]string{
 	"TECH HOUSE":                           "11",
 	"TECHNO (PEAK TIME / DRIVING)":         "6",
 	"TECHNO (RAW / DEEP / HYPNOTIC)":       "92",
-	"TRANCE (MAIN FLOOR) ":                 "7",
+	"TRANCE (MAIN FLOOR)":                  "7",
 	"TRANCE (RAW / DEEP / HYPNOTIC)":       "99",
 	"TRAP / WAVE":                          "38",
 	"UK GARAGE / BASSLINE":                 "86",

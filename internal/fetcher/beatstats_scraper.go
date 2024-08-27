@@ -3,6 +3,7 @@ package fetcher
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"math/rand"
 	"net/http"
 	"time"
@@ -19,14 +20,16 @@ type SongFetcher interface {
 }
 
 type BeatstatsScraper struct {
-	baseURL    string
-	httpClient *http.Client
+	baseURL     string
+	client      *http.Client
+	beatportURL string
 }
 
 func NewBeatstatsScraper(baseURL string) *BeatstatsScraper {
 	return &BeatstatsScraper{
-		baseURL:    baseURL,
-		httpClient: &http.Client{Timeout: 30 * time.Second},
+		baseURL:     baseURL,
+		client:      &http.Client{Timeout: 10 * time.Second},
+		beatportURL: "https://www.beatport.com",
 	}
 }
 
@@ -44,14 +47,22 @@ func (b *BeatstatsScraper) FetchSongs(ctx context.Context, genre string, date ti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	resp, err := b.httpClient.Do(req)
+	// Add headers to mimic a browser
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
+	req.Header.Set("Accept-Language", "en-US,en;q=0.5")
+	req.Header.Set("Connection", "keep-alive")
+	req.Header.Set("Upgrade-Insecure-Requests", "1")
+
+	resp, err := b.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("error making request: %w", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+		body, _ := ioutil.ReadAll(resp.Body)
+		return nil, fmt.Errorf("unexpected status code: %d, body: %s", resp.StatusCode, string(body))
 	}
 
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
@@ -61,19 +72,20 @@ func (b *BeatstatsScraper) FetchSongs(ctx context.Context, genre string, date ti
 
 	var songs []models.Song
 
-	doc.Find(".track-row").Each(func(i int, s *goquery.Selection) {
-		songURL, _ := s.Find(".track-title a").Attr("href")
-		title := s.Find(".track-title a").Text()
-		artist := s.Find(".track-artists").Text()
+	doc.Find("div[id^='top10artistchart-full']").Each(func(i int, s *goquery.Selection) {
+		title := s.Find("div[id^='top10trackchart-title']").Text()
+		artist := s.Find("div[id^='top10trackchart-artistname']").Text()
+		url, exists := s.Find("a").Attr("href")
 
-		song := models.Song{
-			Title:  title,
-			Artist: artist,
-			URL:    b.baseURL + songURL,
-			Genre:  config.GenreMap[genreID],
+		if title != "" && artist != "" && exists {
+			song := models.Song{
+				Title:  title,
+				Artist: artist,
+				Genre:  genre,
+				URL:    b.beatportURL + url,
+			}
+			songs = append(songs, song)
 		}
-
-		songs = append(songs, song)
 	})
 
 	return songs, nil
@@ -85,7 +97,7 @@ func (b *BeatstatsScraper) FetchSongDetails(ctx context.Context, songURL string)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	resp, err := b.httpClient.Do(req)
+	resp, err := b.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("error making request: %w", err)
 	}

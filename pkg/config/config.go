@@ -23,7 +23,7 @@ func LoadConfig() (*Config, error) {
 
 	beatstatsURL := os.Getenv("BEATSTATS_URL")
 	if beatstatsURL == "" {
-		beatstatsURL = "https://api.beatradar.app" // Updated URL
+		beatstatsURL = "https://beatstats.com" // Updated URL
 	}
 
 	redisURL := os.Getenv("REDIS_URL")

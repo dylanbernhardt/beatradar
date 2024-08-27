@@ -2,15 +2,13 @@ package fetcher
 
 import (
 	"context"
+	"github.com/dylanbernhardt/beatradar/internal/models"
 	"net/http"
 	"net/http/httptest"
 	"os"
 	"path/filepath"
-	"strings"
 	"testing"
 	"time"
-
-	"github.com/dylanbernhardt/beatradar/internal/models"
 )
 
 func loadTestHTML(t *testing.T) string {
@@ -33,21 +31,26 @@ func TestBeatstatsScraperFetchSongs(t *testing.T) {
 	defer server.Close()
 
 	scraper := NewBeatstatsScraper(server.URL)
+	scraper.beatportURL = "https://www.beatport.com"
 
 	ctx := context.Background()
-	songs, err := scraper.FetchSongs(ctx, "TRANCE (MAIN FLOOR)", time.Now())
+	genre := "TRANCE (MAIN FLOOR)"
+	songs, err := scraper.FetchSongs(ctx, genre, time.Now())
 	if err != nil {
 		t.Fatalf("FetchSongs failed: %v", err)
 	}
 
-	if len(songs) == 0 {
-		t.Fatalf("Expected to find songs, but got none")
+	expectedSongCount := 100
+	if len(songs) != expectedSongCount {
+		t.Fatalf("Expected to find %d songs, but got %d", expectedSongCount, len(songs))
 	}
 
+	// Check the first song
 	expectedFirstSong := models.Song{
 		Title:  "Children",
 		Artist: "ROBERT MILES, TINLICKER",
 		Genre:  "TRANCE (MAIN FLOOR)",
+		URL:    "https://www.beatport.com/track/track/14269418",
 	}
 
 	if songs[0].Title != expectedFirstSong.Title {
@@ -59,11 +62,16 @@ func TestBeatstatsScraperFetchSongs(t *testing.T) {
 	if songs[0].Genre != expectedFirstSong.Genre {
 		t.Errorf("Expected first song genre to be %q, got %q", expectedFirstSong.Genre, songs[0].Genre)
 	}
+	if songs[0].URL != expectedFirstSong.URL {
+		t.Errorf("Expected first song URL to be %q, got %q", expectedFirstSong.URL, songs[0].URL)
+	}
 
+	// Check the second song
 	expectedSecondSong := models.Song{
 		Title:  "1998 (Victor Ruiz Extended Remix)",
 		Artist: "BINARY FINARY",
 		Genre:  "TRANCE (MAIN FLOOR)",
+		URL:    "https://www.beatport.com/track/track/18160649",
 	}
 
 	if songs[1].Title != expectedSecondSong.Title {
@@ -75,11 +83,8 @@ func TestBeatstatsScraperFetchSongs(t *testing.T) {
 	if songs[1].Genre != expectedSecondSong.Genre {
 		t.Errorf("Expected second song genre to be %q, got %q", expectedSecondSong.Genre, songs[1].Genre)
 	}
-
-	for i, song := range songs {
-		if !strings.HasPrefix(song.URL, "https://www.beatport.com/track/") {
-			t.Errorf("Song %d doesn't have a valid Beatport URL: %s", i+1, song.URL)
-		}
+	if songs[1].URL != expectedSecondSong.URL {
+		t.Errorf("Expected second song URL to be %q, got %q", expectedSecondSong.URL, songs[1].URL)
 	}
 }
 
