@@ -3,7 +3,6 @@ package fetcher
 import (
 	"context"
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/chromedp/chromedp"
@@ -20,26 +19,28 @@ func NewChromeDPScraper(baseURL string) *ChromeDPScraper {
 }
 
 func (c *ChromeDPScraper) FetchSongs(ctx context.Context, genre string, date time.Time) ([]models.Song, error) {
-	return c.fetchSongsFromURL(ctx, c.constructURL(genre, date))
-}
-
-func (c *ChromeDPScraper) constructURL(genre string, date time.Time) string {
 	genreID, ok := config.GetGenreID(genre)
 	if !ok {
-		log.Printf("Unknown genre: %s, using as is", genre)
-		genreID = genre
+		return nil, fmt.Errorf("unknown genre: %s", genre)
 	}
-	return fmt.Sprintf("%s/tracks/home/list?genre=%s&period=2&datefilter=%s",
+
+	url := fmt.Sprintf("%s/tracks/home/list?genre=%s&period=2&datefilter=%s",
 		c.baseURL, genreID, date.Format("2006-01-02"))
+
+	return c.fetchSongsFromURL(ctx, url)
 }
 
 func (c *ChromeDPScraper) fetchSongsFromURL(ctx context.Context, url string) ([]models.Song, error) {
-	// Create a new chrome instance
-	ctx, cancel := chromedp.NewContext(ctx)
+	opts := append(chromedp.DefaultExecAllocatorOptions[:],
+		chromedp.Flag("headless", true),
+		chromedp.Flag("no-sandbox", true),
+		chromedp.Flag("disable-gpu", true),
+		chromedp.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"),
+	)
+	allocCtx, cancel := chromedp.NewExecAllocator(ctx, opts...)
 	defer cancel()
 
-	// Create a timeout
-	ctx, cancel = context.WithTimeout(ctx, 30*time.Second)
+	ctx, cancel = chromedp.NewContext(allocCtx)
 	defer cancel()
 
 	var songs []models.Song

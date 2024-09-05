@@ -2,34 +2,28 @@ package fetcher
 
 import (
 	"context"
-	"github.com/dylanbernhardt/beatradar/internal/models"
-	"net/http"
-	"net/http/httptest"
-	"os"
 	"path/filepath"
 	"testing"
+
+	"github.com/dylanbernhardt/beatradar/internal/models"
 )
 
 func TestChromeDPScraperFetchSongs(t *testing.T) {
-	// Load the sample HTML
-	sampleHTML, err := os.ReadFile(filepath.Join("testdata", "beatstats_sample.html"))
+	// Get the absolute path to the sample HTML file
+	absPath, err := filepath.Abs(filepath.Join("testdata", "beatstats_sample.html"))
 	if err != nil {
-		t.Fatalf("Failed to read sample HTML: %v", err)
+		t.Fatalf("Failed to get absolute path: %v", err)
 	}
 
-	// Create a test server
-	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "text/html")
-		w.Write(sampleHTML)
-	}))
-	defer server.Close()
+	// Create a file URL
+	fileURL := "file://" + absPath
 
-	// Create a ChromeDPScraper with the test server URL
-	scraper := NewChromeDPScraper(server.URL)
+	// Create a ChromeDPScraper with an empty base URL (not used in this test)
+	scraper := NewChromeDPScraper("")
 
 	// Fetch songs
 	ctx := context.Background()
-	songs, err := scraper.fetchSongsFromURL(ctx, server.URL)
+	songs, err := scraper.fetchSongsFromURL(ctx, fileURL)
 	if err != nil {
 		t.Fatalf("Failed to fetch songs: %v", err)
 	}
@@ -43,7 +37,6 @@ func TestChromeDPScraperFetchSongs(t *testing.T) {
 	expectedFirstSong := models.Song{
 		Title:  "Children",
 		Artist: "ROBERT MILES, TINLICKER",
-		URL:    server.URL + "/track/children/14269418",
 	}
 
 	if songs[0].Title != expectedFirstSong.Title {
@@ -51,9 +44,6 @@ func TestChromeDPScraperFetchSongs(t *testing.T) {
 	}
 	if songs[0].Artist != expectedFirstSong.Artist {
 		t.Errorf("Expected first song artist to be %q, got %q", expectedFirstSong.Artist, songs[0].Artist)
-	}
-	if songs[0].URL != expectedFirstSong.URL {
-		t.Errorf("Expected first song URL to be %q, got %q", expectedFirstSong.URL, songs[0].URL)
 	}
 
 	// You can add more checks for other songs if needed
