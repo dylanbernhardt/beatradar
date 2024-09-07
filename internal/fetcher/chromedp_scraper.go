@@ -2,7 +2,9 @@ package fetcher
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/chromedp/chromedp"
@@ -40,34 +42,60 @@ func (c *ChromeDPScraper) fetchSongsFromURL(ctx context.Context, url string) ([]
 	allocCtx, cancel := chromedp.NewExecAllocator(ctx, opts...)
 	defer cancel()
 
-	ctx, cancel = chromedp.NewContext(allocCtx)
+	if err := ctx.Err(); err != nil {
+		return nil, fmt.Errorf("parent context is already done: %w", err)
+	}
+
+	ctx, cancel = context.WithTimeout(allocCtx, 30*time.Second)
+	defer cancel()
+
+	browserCtx, cancel := chromedp.NewContext(ctx)
 	defer cancel()
 
 	var songs []models.Song
 
-	err := chromedp.Run(ctx,
-		chromedp.Navigate(url),
-		chromedp.WaitVisible(`div[id^='top10artistchart-full']`, chromedp.ByQuery),
-		chromedp.Evaluate(`
-            Array.from(document.querySelectorAll("div[id^='top10artistchart-full']")).map(el => {
-                return {
-                    title: el.querySelector("div[id^='top10trackchart-title']").textContent.trim(),
-                    artist: el.querySelector("div[id^='top10trackchart-artistname']").textContent.trim(),
-                    url: el.querySelector("a").href
-                }
-            })
-        `, &songs),
-	)
+	err := func() (err error) {
+		defer func() {
+			if r := recover(); r != nil {
+				err = fmt.Errorf("panic occurred during ChromeDP run: %v", r)
+			}
+		}()
+
+		err = chromedp.Run(browserCtx,
+			chromedp.Navigate(url),
+			chromedp.WaitVisible(`div[id^='top10artistchart-full']`, chromedp.ByQuery),
+			chromedp.Evaluate(`
+                Array.from(document.querySelectorAll("div[id^='top10artistchart-full']")).map(el => {
+                    return {
+                        title: el.querySelector("div[id^='top10trackchart-title']").textContent.trim(),
+                        artist: el.querySelector("div[id^='top10trackchart-artistname']").textContent.trim(),
+                        url: el.querySelector("a").href
+                    }
+                })
+            `, &songs),
+		)
+		return
+	}()
 
 	if err != nil {
+		if errors.Is(err, context.DeadlineExceeded) {
+			return nil, fmt.Errorf("timeout while scraping with ChromeDP: %w", err)
+		}
+		if strings.Contains(err.Error(), "net::ERR_") {
+			return nil, fmt.Errorf("network error while scraping with ChromeDP: %w", err)
+		}
 		return nil, fmt.Errorf("error scraping with ChromeDP: %w", err)
+	}
+
+	if len(songs) == 0 {
+		return nil, fmt.Errorf("no songs found at URL: %s", url)
 	}
 
 	return songs, nil
 }
 
 func (c *ChromeDPScraper) FetchSongDetails(ctx context.Context, songURL string) (*models.Song, error) {
-	// Implement if needed
+	// TODO Implement if needed
 	return nil, fmt.Errorf("FetchSongDetails not implemented for ChromeDPScraper")
 }
 
