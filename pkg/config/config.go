@@ -11,6 +11,7 @@ type Config struct {
 	Port           string
 	BeatstatsURL   string
 	RedisURL       string
+	RedisPassword  string
 	CacheTTL       time.Duration
 	ScraperTimeout time.Duration
 }
